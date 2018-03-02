@@ -12,9 +12,9 @@ xhr.onload = function() {
 // Sets up a new variable called "newContent" that will eventually hold the HTML to be filled using the "for" loop below
         var newContent = "";
         for (let i = 0; i < responseObject.restaurants.length; i++) {
-            newContent += '<div class="event">';
-            newContent += '<h2>Restaurant: ' + responseObject.restaurants[i].restaurant + '<h2>';
-            newContent += '<p>My Rating: ' + responseObject.restaurants[i].my_rating + '</p>';
+            newContent += '<div class="col-4 border rounded text-uppercase text-light bg-dark">';
+            newContent += '<h3>' + responseObject.restaurants[i].restaurant + '</h3>';
+            newContent += '<p class="lead text-info">My Rating: ' + responseObject.restaurants[i].my_rating + '</p>';
             newContent += '</div>';
         }
 // Grabs the empty <div> from index.html with the ID of "content" and fills it with "newContent"
